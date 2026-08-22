@@ -12,7 +12,7 @@ insurer whose teams have been quietly adopting AI. Sound familiar?
 
 | Directory | What the team thinks it is | What Scout sees |
 |-----------|---------------------------|-----------------|
-| `customer-chatbot/` | Support chatbot PoC | Personal data (name, email, birth date) sent to OpenAI · hardcoded API key |
+| `customer-chatbot/` | Support chatbot PoC | Personal data (name, email, birth date) sent to OpenAI · key was hardcoded (fixed since `baseline`) |
 | `claims-rag/` | Claims-handling knowledge base | LangChain + Chroma RAG, OpenAI embeddings, key handled properly (env var) |
 | `risk-scoring/` | Underwriting risk experiment | Financial data (IBAN, balances) analyzed by **local** Ollama — stays in perimeter |
 | `marketing-classifier/` | Lead scoring script | Customer emails sent to HuggingFace inference API · hardcoded token |

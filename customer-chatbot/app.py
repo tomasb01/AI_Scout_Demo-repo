@@ -3,15 +3,13 @@
 Answers policyholder questions using their contract data as context.
 """
 
+import os
 import sqlite3
 
 from fastapi import FastAPI
 from openai import OpenAI
 
-# TODO: move to env var before go-live
-OPENAI_API_KEY = "sk-DEMOfakekey1234567890abcdefDEMOfakekey123456"
-
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 app = FastAPI()
 
 SYSTEM_PROMPT = (
