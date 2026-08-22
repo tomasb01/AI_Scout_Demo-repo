@@ -1,0 +1,12 @@
+__pycache__/
+node_modules/
+chroma_db/
+*.db
+crm_export.json
+scored_leads.json
+risk_bands.json
+tickets.log
+report*.html
+*.sarif
+baseline.json
+current.json

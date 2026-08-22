@@ -1,0 +1,16 @@
+{
+  "name": "marketing-classifier",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Nightly lead scoring over CRM email export",
+  "scripts": {
+    "classify": "ts-node classify.ts"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^2.8.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

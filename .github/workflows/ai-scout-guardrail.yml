@@ -1,0 +1,20 @@
+# AI Scout developer guardrail — fails the build on hardcoded AI API keys
+# or sensitive data sent to an external LLM.
+#
+# NOTE: in this demo repo the issues are planted on purpose, so the job is
+# expected to FAIL — that's the demo. Remove `continue-on-error` in a real repo.
+name: AI Scout Guardrail
+
+on: [push, pull_request]
+
+jobs:
+  guardrail:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ai-scout
+      - run: aiscout check --path .
